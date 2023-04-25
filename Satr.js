@@ -23,3 +23,9 @@ const Item = (arr,item,item2) => {
 };
 
 console.log(Item(array,2,5));
+
+// -------------------------------
+
+for(let i = 1;i > 5;i++){
+ 
+}
