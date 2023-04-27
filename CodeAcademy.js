@@ -175,10 +175,16 @@ howawi;
 
 // --
 
-function sumArray(arr) {
-  return arr.reduce(function (acc, curr) {
-    return acc + curr;
-  });
+// function sumArray(arr) {
+//   return arr.reduce(function (acc, curr) {
+//     return acc + curr;
+//   });
+// }
+
+function sumArray(arr){
+  return arr.reduce(function(a,b){
+    return a + b
+  })
 }
 
 var sell = [1, 2, 3];
@@ -190,3 +196,13 @@ const sumSome = (a, b) => {
 };
 
 console.log(sumSome(1, 2));
+
+
+a = 0
+
+a = 1 + 1
+a
+
+a += 4
+a
+
