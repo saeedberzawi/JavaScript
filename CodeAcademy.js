@@ -181,10 +181,10 @@ howawi;
 //   });
 // }
 
-function sumArray(arr){
-  return arr.reduce(function(a,b){
-    return a + b
-  })
+function sumArray(arr) {
+  return arr.reduce(function (a, b) {
+    return a + b;
+  });
 }
 
 var sell = [1, 2, 3];
@@ -197,12 +197,211 @@ const sumSome = (a, b) => {
 
 console.log(sumSome(1, 2));
 
+a = 0;
 
-a = 0
+a = 1 + 1;
+a;
 
-a = 1 + 1
-a
+a += 4;
+a;
 
-a += 4
-a
+// ==================================================================
 
+const average = (array) => {
+  let numberOfElements = array.length;
+  let total = 0;
+
+  for (i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+  let result = total / numberOfElements;
+  return result;
+};
+
+array = [2, 4, 5, 5, 7, 0];
+
+console.log(average(array));
+
+// =========================
+
+function multiply(arr, n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return multiply(arr, n - 1) + arr[n - 1];
+  }
+}
+
+console.log(multiply([1, 2, 3, 4, 5, 6], 6));
+
+// ================================
+
+//Setup
+var contacts = [
+  {
+    firstName: 'Akira',
+    lastName: 'Laine',
+    number: '0543236543',
+    likes: ['Pizza', 'Coding', 'Brownie Points'],
+  },
+  {
+    firstName: 'Harry',
+    lastName: 'Potter',
+    number: '0994372684',
+    likes: ['Hogwarts', 'Magic', 'Hagrid'],
+  },
+  {
+    firstName: 'Sherlock',
+    lastName: 'Holmes',
+    number: '0487345643',
+    likes: ['Intriguing Cases', 'Violin'],
+  },
+  {
+    firstName: 'Kristian',
+    lastName: 'Vos',
+    number: 'unknown',
+    likes: ['JavaScript', 'Gaming', 'Foxes'],
+  },
+];
+
+function lookUpProfile(name, prop) {
+  for (var i = 0; i < contacts.length; i++) {
+    if (contacts[i].firstName === name) {
+      return contacts[i][prop] || 'No such property';
+    }
+  }
+  return 'No such contact';
+}
+
+// Change these values to test your function
+var data = lookUpProfile('Sherlock', 'likes');
+
+console.log(data);
+
+// =============
+
+function randomWholeNum() {
+  return Math.floor(Math.random() * 10);
+}
+
+console.log(randomWholeNum());
+
+// -------------------------------------------------
+
+function randomRange(myMin, myMax) {
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+}
+
+var myRandom = randomRange(4, 10);
+
+console.log(myRandom);
+
+// ====================================
+
+// The following function uses an if/else statement to check a condition:
+
+function findGreater(a, b) {
+  if (a > b) {
+    return 'a is greater';
+  } else {
+    return 'b is greater or equal';
+  }
+}
+
+console.log(findGreater(1, 2));
+
+// This can be re-written using the conditional operator:
+
+function findGreater2(a, b) {
+  return a > b ? 'a is greater' : 'b is greater or equal';
+}
+
+console.log(findGreater2(2, 1));
+
+// ---
+
+function checkEqual(a, b) {
+  return a == b ? 'Equal' : 'Not Equal';
+}
+
+console.log(checkEqual(1, 2));
+
+// ===============
+
+// The following function uses if, else if, and else statements to check multiple conditions:
+
+function findGreaterOrEqual(a, b) {
+  if (a === b) {
+    return 'a and b are equal';
+  } else if (a > b) {
+    return 'a is greater';
+  } else {
+    return 'b is greater';
+  }
+}
+// The above function can be re-written using multiple conditional operators:
+
+function findGreaterOrEqual(a, b) {
+  return a === b
+    ? 'a and b are equal'
+    : a > b
+    ? 'a is greater'
+    : 'b is greater';
+}
+
+function findGreaterOrEqual(a, b) {
+  return a === b
+    ? 'a and b are equal'
+    : a > b
+    ? 'a is greater'
+    : 'b is greater';
+}
+
+function checkSign(num) {
+  return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
+}
+
+console.log(checkSign(1));
+console.log(checkSign(0));
+console.log(checkSign(-1));
+
+// =====================
+
+function countUp(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countUp(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countUp(5));
+
+// -----
+
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+}
+
+console.log(countdown(5));
+
+// ---------
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum < startNum) {
+    return [];
+  } else {
+    const numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+
+console.log(rangeOfNumbers(1, 5));

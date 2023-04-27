@@ -1,31 +1,24 @@
-const average = (array) => {
-  let numberOfElements = array.length;
-  let total = 0;
+function coins_combinations(amount, coins) {
+  // write your code here
 
-  for (i = 0; i < array.length; i++) {
-    total += array[i];
+  const table = Array.from({ length: amount + 1 }, () =>
+    Array(coins.length).fill(0)
+  );
+
+  for (let j = 0; j < coins.length; j++) {
+    table[0][j] = 1;
   }
-  let result = total / numberOfElements;
-  return result;
-};
 
-array = [2, 4, 5, 5, 7, 0];
+  for (let i = 1; i < table.length; i++) {
+    for (let j = 0; j < coins.length; j++) {
+      const withoutCoin = j > 0 ? table[i][j - 1] : 0;
+      const withCoin = i - coins[j] >= 0 ? table[i - coins[j]][j] : 0;
+      table[i][j] = withoutCoin + withCoin;
+    }
+  }
 
-console.log(average(array));
-
-// ---------------------------------
-
-const Item = (arr,item,item2) => {
- arr.push(item,item2);
- arr.shift();
- arr.shift();
- return arr 
-};
-
-console.log(Item(array,2,5));
-
-// -------------------------------
-
-for(let i = 1;i > 5;i++){
- 
+  return table[amount][coins.length - 1];
 }
+
+console.log(coins_combinations(3, [1,9, 5]));
+// ---------------------------------
