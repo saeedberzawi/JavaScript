@@ -90,7 +90,9 @@ const result3d = addAndRemove(arr3d, newItem3d, index3d);
 
 console.log(result3d);
 
-// ---------------
+// ----------------------------------------------------------------   --     ---     --
+// ---------------------------------------------------------------   --     ---  --
+// --------------------------------------------------------------   --     ---    --
 
 const myObj = {
   top: "hat",
@@ -99,6 +101,8 @@ const myObj = {
 
 console.log(myObj.hasOwnProperty("top"));
 console.log(myObj.hasOwnProperty("middle"));
+// ---
+console.log(Array.isArray(newItem3d));
 
 // --------
 
@@ -119,15 +123,7 @@ console.log(phone.length);
 
 // -----------------------------------
 
-// Setup
-// const myArr = [2, 3, 4, 5, 6];
-const myArr = ["ahmed", "ieesa", "tamam"];
-
-const newMyArr = myArr.splice("");
-newMyArr;
-
-// Only change code below this line
-
+const myArr = [2, 3, 4, 5, 6];
 let total = 0;
 
 for (let i = 0; i < myArr.length; i++) {
@@ -157,3 +153,68 @@ var product = multiplyAll([
 ]);
 
 console.log(product);
+
+// --------------------
+
+const sumAll = (arr) => {
+  var total = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      total += arr[i][j];
+    }
+  }
+  return total;
+};
+
+const Taha = [
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+];
+
+console.log(sumAll(Taha));
+
+function minus(arr) {
+  let prince = 0;
+  for (let i = 0; i < arr.length; i++) {
+    prince += arr[i];
+  }
+  return prince;
+}
+
+console.log(minus(Taha));
+
+function mohmad(arr) {
+  let total = 0;
+  for (i = 0; i < arr.length; i++) {
+    for (j = 0; j < arr[i].length; j++) {
+      for (n = 0; n < arr[i][j].length; n++) {
+        total += arr[i][j][n];
+      }
+    }
+  }
+  return total;
+}
+
+const Tah = [
+  [
+    [1, 2],
+    [3, 4],
+  ],
+  [
+    [5, 6],
+    [7, 8],
+  ],
+];
+
+console.log(mohmad(Tah));
+
+function sumArray(arr) {
+  return arr.flat(2).reduce((total, curr) => total + curr, 0);
+}
+
+console.log(sumArray(Tah));
+
+const dada = Tah.flat(2)
+dada
