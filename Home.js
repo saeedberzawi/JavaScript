@@ -11,6 +11,7 @@ const name = (arr, item) => {
 };
 a;
 console.log(name(a, 4));
+console.log(name(a, [1, 2, 3]));
 
 // ---------------------------
 
@@ -90,9 +91,9 @@ const result3d = addAndRemove(arr3d, newItem3d, index3d);
 
 console.log(result3d);
 
-// ----------------------------------------------------------------   --     ---     --
-// ---------------------------------------------------------------   --     ---  --
-// --------------------------------------------------------------   --     ---    --
+// ----------------------------------------------------------------   --     ---     --       ------
+// ---------------------------------------------------------------   --     ---  --          -- -- --
+// --------------------------------------------------------------   --     ---    --        --      --
 
 const myObj = {
   top: "hat",
@@ -216,5 +217,34 @@ function sumArray(arr) {
 
 console.log(sumArray(Tah));
 
-const dada = Tah.flat(2)
-dada
+const dada = Tah.flat(2);
+dada;
+
+// --------------------
+
+function mokUP(num) {
+  answer = ''
+  switch (num) {
+    case 1:
+      num < 5;
+      return "The Number more than 5";
+    case 2:
+      num == 5;
+      return "The Number equal 5";
+    default:
+      "The Number less than 5";
+  }
+
+  // if (num < 5) {
+  //   return "I is less than 5";
+  // } else if (num == 5) {
+  //   return "I is Equal";
+  // } else {
+  //   return "I is Bigger";
+  // }
+}
+
+console.log(mokUP(6));
+console.log(mokUP(5));
+console.log(mokUP(4));
+console.log(mokUP());
