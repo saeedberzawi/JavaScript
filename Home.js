@@ -218,3 +218,19 @@ console.log(sumArray(Tah));
 
 const dada = Tah.flat(2)
 dada
+
+
+// =======================================================================================
+// =======================================================================================
+
+
+let message = "how are you"
+
+let result = message.split(' ')
+result
+
+let result2 = message.slice('')
+result2
+
+let result3 = result.splice(0,2)
+result3
