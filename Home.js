@@ -37,10 +37,10 @@ const truck = [
   [7, 8, 9],
 ];
 
-const addAndRemove = (matrix, newElement, index) => {
-  matrix.shift();
-  matrix.splice(index, 0, newElement);
-  return matrix;
+const addAndRemove = (arr, newElement, index) => {
+  arr.shift();
+  arr.splice(index, 0, newElement);
+  return arr;
 };
 
 const newElement = [1, 9, 9, 2];
@@ -48,7 +48,7 @@ const index = 2;
 
 truck;
 console.log(addAndRemove(truck, newElement, index));
-console.log(addAndRemove(truck, [1, 9, 9, 6], 1));
+console.log(addAndRemove(truck, [1, 9, 9, 6], 0));
 
 // -----------------------
 
@@ -222,29 +222,30 @@ dada;
 
 // --------------------
 
-function mokUP(num) {
-  answer = ''
-  switch (num) {
-    case 1:
-      num < 5;
-      return "The Number more than 5";
-    case 2:
-      num == 5;
-      return "The Number equal 5";
-    default:
-      "The Number less than 5";
+function walk(arr) {
+  if (arr > 1) {
+    return `${arr} positive`;
+  } else {
+    if (arr < 0) {
+      return `${arr} negative`;
+    } else {
+      return `${arr} zero`;
+    }
   }
-
-  // if (num < 5) {
-  //   return "I is less than 5";
-  // } else if (num == 5) {
-  //   return "I is Equal";
-  // } else {
-  //   return "I is Bigger";
-  // }
 }
 
-console.log(mokUP(6));
-console.log(mokUP(5));
-console.log(mokUP(4));
-console.log(mokUP());
+function getTo(arr) {
+  return arr > 0
+    ? `${arr} positive`
+    : arr < 0
+    ? `${arr} negative`
+    : `${arr} zero`;
+}
+
+console.log(getTo(1));
+console.log(getTo(0));
+console.log(getTo(-1));
+
+console.log(walk(1));
+console.log(walk(0));
+console.log(walk(-1));
