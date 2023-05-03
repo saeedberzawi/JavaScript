@@ -38,10 +38,10 @@ const truck = [
   [7, 8, 9],
 ];
 
-const addAndRemove = (matrix, newElement, index) => {
-  matrix.shift();
-  matrix.splice(index, 0, newElement);
-  return matrix;
+const addAndRemove = (arr, newElement, index) => {
+  arr.shift();
+  arr.splice(index, 0, newElement);
+  return arr;
 };
 
 const newElement = [1, 9, 9, 2];
@@ -49,7 +49,7 @@ const index = 2;
 
 truck;
 console.log(addAndRemove(truck, newElement, index));
-console.log(addAndRemove(truck, [1, 9, 9, 6], 1));
+console.log(addAndRemove(truck, [1, 9, 9, 6], 0));
 
 // -----------------------
 
@@ -218,78 +218,5 @@ function sumArray(arr) {
 
 console.log(sumArray(Tah));
 
-const dada = Tah.flat(2);
-dada;
-
-// ===========================
-
-const ab = [
-  [
-    [1, 2],
-    [3, 4, 5],
-  ],
-  [[2, 3], [5]],
-];
-
-const sumAb = (arr) => {
-  let result = 0;
-  for (i = 0; i < arr.length; i += 1) {
-    for (j = 0; j < arr[i].length; j++) {
-      for (n = 0; n < arr[i][j].length; n++) {
-        result += arr[i][j][n];
-      }
-    }
-  }
-  return result;
-};
-
-console.log(sumAb(ab));
-
-
-// ========================================
-// ========================================
-
-const abs = [1,2,3,4,5,6]
-
-let abs1 =abs.slice(2,4)
-abs1
-abs
-// -
-let abs2="how are you"
-let abs22 = abs2.split()
-abs2
-abs22
-// -
-let abs3= abs.splice(0,0,7,8,9)
-abs3
-abs
-// -
-let abs4= abs.join("1,2")
-abs4
-abs
-
-// ==================================
-
-// join ======
-
-const fruits = ['apple', 'banana', 'orange'];
-const joinedString = fruits.join(', ');
-console.log(joinedString);
-// Output: "apple, banana, orange"
-
-const numbers = [1, 2, 3, 4, 5];
-const joinedNumbers = numbers.join(' ');
-console.log(joinedNumbers);
-// Output: "1-2-3-4-5"
-
-// split ======
-
-const fruitsString = "apple, banana, orange";
-const fruitsArray = fruitsString.split(', ');
-console.log(fruitsArray);
-// Output: ["apple", "banana", "orange"]
-
-const numbersString = "1-2-3-4-5";
-const numbersArray = numbersString.split('-');
-console.log(numbersArray);
-// Output: ["1", "2", "3", "4", "5"]
+const dada = Tah.flat(2)
+dada
