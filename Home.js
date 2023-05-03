@@ -15,6 +15,7 @@ console.log(name(a, [1, 2, 3]));
 
 // ---------------------------
 
+
 const b = [
   [1, 2, 4],
   [3, 5, 6],
@@ -96,12 +97,12 @@ console.log(result3d);
 // --------------------------------------------------------------   --     ---    --        --      --
 
 const myObj = {
-  top: "hat",
-  bottom: "pants",
+  top: 'hat',
+  bottom: 'pants',
 };
 
-console.log(myObj.hasOwnProperty("top"));
-console.log(myObj.hasOwnProperty("middle"));
+console.log(myObj.hasOwnProperty('top'));
+console.log(myObj.hasOwnProperty('middle'));
 // ---
 console.log(Array.isArray(newItem3d));
 
@@ -143,7 +144,7 @@ function multiplyAll(arr) {
       product += arr[i][j];
     }
   }
-
+  
   return product;
 }
 
@@ -217,5 +218,78 @@ function sumArray(arr) {
 
 console.log(sumArray(Tah));
 
-const dada = Tah.flat(2)
-dada
+const dada = Tah.flat(2);
+dada;
+
+// ===========================
+
+const ab = [
+  [
+    [1, 2],
+    [3, 4, 5],
+  ],
+  [[2, 3], [5]],
+];
+
+const sumAb = (arr) => {
+  let result = 0;
+  for (i = 0; i < arr.length; i += 1) {
+    for (j = 0; j < arr[i].length; j++) {
+      for (n = 0; n < arr[i][j].length; n++) {
+        result += arr[i][j][n];
+      }
+    }
+  }
+  return result;
+};
+
+console.log(sumAb(ab));
+
+
+// ========================================
+// ========================================
+
+const abs = [1,2,3,4,5,6]
+
+let abs1 =abs.slice(2,4)
+abs1
+abs
+// -
+let abs2="how are you"
+let abs22 = abs2.split()
+abs2
+abs22
+// -
+let abs3= abs.splice(0,0,7,8,9)
+abs3
+abs
+// -
+let abs4= abs.join("1,2")
+abs4
+abs
+
+// ==================================
+
+// join ======
+
+const fruits = ['apple', 'banana', 'orange'];
+const joinedString = fruits.join(', ');
+console.log(joinedString);
+// Output: "apple, banana, orange"
+
+const numbers = [1, 2, 3, 4, 5];
+const joinedNumbers = numbers.join(' ');
+console.log(joinedNumbers);
+// Output: "1-2-3-4-5"
+
+// split ======
+
+const fruitsString = "apple, banana, orange";
+const fruitsArray = fruitsString.split(', ');
+console.log(fruitsArray);
+// Output: ["apple", "banana", "orange"]
+
+const numbersString = "1-2-3-4-5";
+const numbersArray = numbersString.split('-');
+console.log(numbersArray);
+// Output: ["1", "2", "3", "4", "5"]
