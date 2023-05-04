@@ -15,7 +15,6 @@ console.log(name(a, [1, 2, 3]));
 
 // ---------------------------
 
-
 const b = [
   [1, 2, 4],
   [3, 5, 6],
@@ -144,7 +143,7 @@ function multiplyAll(arr) {
       product += arr[i][j];
     }
   }
-  
+
   return product;
 }
 
@@ -213,10 +212,21 @@ const Tah = [
 console.log(mohmad(Tah));
 
 function sumArray(arr) {
-  return arr.flat(2).reduce((total, curr) => total + curr, 0);
+  return arr.flat(2).reduce((total, curr) => total + curr);
 }
 
 console.log(sumArray(Tah));
 
-const dada = Tah.flat(2)
-dada
+const dada = Tah.flat();
+dada;
+
+// ==================
+
+let obj = {
+  name: 'FreeCodeCamp',
+  review: 'Awesome',
+};
+Object.freeze(obj);
+obj.review = 'bad';
+obj.newProp = 'Test';
+console.log(obj); 
