@@ -217,7 +217,7 @@ function sumArray(arr) {
 
 console.log(sumArray(Tah));
 
-const dada = Tah.flat();
+const dada = Tah.flat(2);
 dada;
 
 // ==================
@@ -229,4 +229,41 @@ let obj = {
 Object.freeze(obj);
 obj.review = 'bad';
 obj.newProp = 'Test';
-console.log(obj); 
+console.log(obj);
+
+// ===============
+
+let abs = [1, 2, 3, 4, 5];
+
+const sumMan = (...arr) => {
+  let result = 0;
+  for (i = 0; i < arr.length; i += 1) {
+    result += arr[i];
+  }
+  return result;
+};
+
+console.log(sumMan(abs));
+console.log(sumMan(1,2,3,4,5));
+
+const sum = (...args) => {
+  let total = 0;
+  if (typeof args[0] === 'object' && args[0] instanceof Array) {
+    total = args[0].reduce((acc, val) => acc + val);
+  } else {
+    total = args.reduce((acc, val) => acc + val);
+  }
+  return total;
+};
+
+console.log(sum(1, 2, 3,4,5)); // Output: 6
+console.log(sum(abs)); // Output: 6
+
+grand = 1
+console.log(typeof(grand));
+console.log(Array.isArray(grand));
+console.log(grand instanceof Array);
+
+
+
+
