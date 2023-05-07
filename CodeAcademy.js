@@ -398,7 +398,6 @@ function rangeOfNumbers(startNum, endNum) {
 
 console.log(rangeOfNumbers(1, 5));
 
-
 // ==================
 
 let obj = {
@@ -408,7 +407,7 @@ let obj = {
 Object.freeze(obj);
 obj.review = 'bad';
 obj.newProp = 'Test';
-console.log(obj); 
+console.log(obj);
 
 // =================================
 
@@ -418,15 +417,15 @@ function freezeObj() {
   };
   // Only change code below this line
   Object.freeze(MATH_CONSTANTS);
-  MATH_CONSTANTS
+  MATH_CONSTANTS;
   // Only change code above this line
   try {
     MATH_CONSTANTS.PI = 99;
   } catch (ex) {
     console.log(ex);
   }
-  
-  MATH_CONSTANTS
+
+  MATH_CONSTANTS;
   return MATH_CONSTANTS.PI;
 }
 
@@ -440,21 +439,21 @@ console.log(arr);
 
 function removeFirstTwo(list) {
   // Only change code below this line
-  const [a,b,...shorterList] = list; // Change this line
+  const [a, b, ...shorterList] = list; // Change this line
   // Only change code above this line
   return shorterList;
 }
 
 const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const sourceWithoutFirstTwo = removeFirstTwo(source);
-source
-sourceWithoutFirstTwo
+source;
+sourceWithoutFirstTwo;
 
 // ------------------
 
 const result = {
   success: ['max-length', 'no-amd', 'prefer-arrow-functions'],
-  failure: ['no-var', 'var-on-top', 'linebreak'],
+  failure: ['no-var', 'var-on-top', 'line-break'],
   skipped: ['no-extra-semi', 'no-dup-keys'],
 };
 function makeList(arr) {
@@ -469,4 +468,21 @@ function makeList(arr) {
 }
 
 const failuresList = makeList(result.failure);
-failuresList
+failuresList;
+
+// ==========
+
+function makeList2(obj) {
+  'use strict';
+  // change code below this line
+  const failureItems = [];
+  for (let prop in obj) {
+    failureItems.push(`${prop}: <li class="text">${obj[prop]}</li>`);
+  }
+  // change code above this line
+  return failureItems;
+}
+const failuresList2 = makeList2(result);
+failuresList2;
+result
+
