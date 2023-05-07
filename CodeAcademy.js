@@ -197,14 +197,6 @@ const sumSome = (a, b) => {
 
 console.log(sumSome(1, 2));
 
-a = 0;
-
-a = 1 + 1;
-a;
-
-a += 4;
-a;
-
 // ==================================================================
 
 const average = (array) => {
@@ -405,3 +397,55 @@ function rangeOfNumbers(startNum, endNum) {
 }
 
 console.log(rangeOfNumbers(1, 5));
+
+
+// ==================
+
+let obj = {
+  name: 'FreeCodeCamp',
+  review: 'Awesome',
+};
+Object.freeze(obj);
+obj.review = 'bad';
+obj.newProp = 'Test';
+console.log(obj); 
+
+// =================================
+
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14,
+  };
+  // Only change code below this line
+  Object.freeze(MATH_CONSTANTS);
+  MATH_CONSTANTS
+  // Only change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch (ex) {
+    console.log(ex);
+  }
+  
+  MATH_CONSTANTS
+  return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObj();
+
+// ============
+
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b);
+console.log(arr);
+
+function removeFirstTwo(list) {
+  // Only change code below this line
+  const [a,b,...shorterList] = list; // Change this line
+  // Only change code above this line
+  return shorterList;
+}
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sourceWithoutFirstTwo = removeFirstTwo(source);
+source
+sourceWithoutFirstTwo

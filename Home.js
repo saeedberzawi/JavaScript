@@ -96,12 +96,12 @@ console.log(result3d);
 // --------------------------------------------------------------   --     ---    --        --      --
 
 const myObj = {
-  top: "hat",
-  bottom: "pants",
+  top: 'hat',
+  bottom: 'pants',
 };
 
-console.log(myObj.hasOwnProperty("top"));
-console.log(myObj.hasOwnProperty("middle"));
+console.log(myObj.hasOwnProperty('top'));
+console.log(myObj.hasOwnProperty('middle'));
 // ---
 console.log(Array.isArray(newItem3d));
 
@@ -212,23 +212,39 @@ const Tah = [
 console.log(mohmad(Tah));
 
 function sumArray(arr) {
-  return arr.flat(2).reduce((total, curr) => total + curr, 0);
+  return arr.flat(2).reduce((total, curr) => total + curr);
 }
 
 console.log(sumArray(Tah));
 
-const dada = Tah.flat(2);
+const dada = Tah.flat();
 dada;
 
-// --------------------
+// ==================
 
-const sum = (x, y, z) => {
-  const args = [x, y, z];
-  let total = 0;
-  for (let i = 0; i < args.length; i++) {
-    total += args[i];
+function mokUP(num) {
+  answer = ''
+  switch (num) {
+    case 1:
+      num < 5;
+      return "The Number more than 5";
+    case 2:
+      num == 5;
+      return "The Number equal 5";
+    default:
+      "The Number less than 5";
   }
-  return total;
+
+  // if (num < 5) {
+  //   return "I is less than 5";
+  // } else if (num == 5) {
+  //   return "I is Equal";
+  // } else {
+  //   return "I is Bigger";
+  // }
 }
 
-console.log(sum(1,2,3));
+console.log(mokUP(6));
+console.log(mokUP(5));
+console.log(mokUP(4));
+console.log(mokUP());
