@@ -222,29 +222,13 @@ dada;
 
 // --------------------
 
-function mokUP(num) {
-  answer = ''
-  switch (num) {
-    case 1:
-      num < 5;
-      return "The Number more than 5";
-    case 2:
-      num == 5;
-      return "The Number equal 5";
-    default:
-      "The Number less than 5";
+const sum = (x, y, z) => {
+  const args = [x, y, z];
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
   }
-
-  // if (num < 5) {
-  //   return "I is less than 5";
-  // } else if (num == 5) {
-  //   return "I is Equal";
-  // } else {
-  //   return "I is Bigger";
-  // }
+  return total;
 }
 
-console.log(mokUP(6));
-console.log(mokUP(5));
-console.log(mokUP(4));
-console.log(mokUP());
+console.log(sum(1,2,3));
