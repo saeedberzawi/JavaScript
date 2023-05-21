@@ -14,7 +14,7 @@ console.log(name(a, 4));
 console.log(name(a, [1, 2, 3]));
 
 // ---------------------------
-
+//  xxxxx
 const b = [
   [1, 2, 4],
   [3, 5, 6],
@@ -37,7 +37,7 @@ const truck = [
   [7, 8, 9],
 ];
 
-const addAndRemove = (arr, newElement, index) => {
+const addAndRemove = (arr, index, newElement,) => {
   arr.shift();
   arr.splice(index, 0, newElement);
   return arr;
@@ -48,7 +48,7 @@ const index = 2;
 
 truck;
 console.log(addAndRemove(truck, newElement, index));
-console.log(addAndRemove(truck, [1, 9, 9, 6], 0));
+console.log(addAndRemove(truck, 0,[1, 9, 9, 6]));
 
 // -----------------------
 
@@ -75,6 +75,7 @@ function addAndRe(arr, item, index) {
 }
 
 arr3d;
+console.log(addAndRe(arr3d, [13, 14, 15], 0));
 
 const newItem3d = [
   [
@@ -229,4 +230,5 @@ let obj = {
 Object.freeze(obj);
 obj.review = 'bad';
 obj.newProp = 'Test';
-console.log(obj); 
+console.log(obj);
+

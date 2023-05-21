@@ -138,6 +138,7 @@ while (i < 5) {
 }
 
 i;
+ourArray
 
 // --------------------------------------
 
@@ -259,7 +260,7 @@ var contacts = [
 function lookUpProfile(name, prop) {
   for (var i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {
-      return contacts[i][prop] || 'No such property';
+      return ` your search is : ${contacts[i][prop]}` || 'No such property';
     }
   }
   return 'No such contact';
