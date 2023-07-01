@@ -138,6 +138,7 @@ while (i < 5) {
 }
 
 i;
+ourArray
 
 // --------------------------------------
 
@@ -258,7 +259,11 @@ var contacts = [
 function lookUpProfile(name, prop) {
   for (var i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {
+<<<<<<< HEAD
       return contacts[i][prop] || "No such property";
+=======
+      return ` your search is : ${contacts[i][prop]}` || 'No such property';
+>>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
     }
   }
   return "No such contact";
@@ -404,8 +409,13 @@ let obj = {
   review: "Awesome",
 };
 Object.freeze(obj);
+<<<<<<< HEAD
 obj.review = "bad";
 obj.newProp = "Test";
+=======
+obj.review = 'bad';
+obj.newProp = 'Test';
+>>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
 console.log(obj);
 
 // =================================
@@ -447,3 +457,49 @@ const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const sourceWithoutFirstTwo = removeFirstTwo(source);
 source;
 sourceWithoutFirstTwo;
+<<<<<<< HEAD
+=======
+
+// ------------------
+
+const result = {
+  success: ['max-length', 'no-amd', 'prefer-arrow-functions'],
+  failure: ['no-var', 'var-on-top', 'line-break'],
+  skipped: ['no-extra-semi', 'no-dup-keys'],
+};
+function makeList(arr) {
+  'use strict';
+  // change code below this line
+  const failureItems = [];
+  for (let i = 0; i < arr.length; i++) {
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+  }
+  // change code above this line
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+failuresList;
+
+// ==========
+
+function makeList2(obj) {
+  'use strict';
+  // change code below this line
+  const failureItems = [];
+  for (let prop in obj) {
+    failureItems.push(`${prop}: <li class="text">${obj[prop]}</li>`);
+  }
+  // change code above this line
+  return failureItems;
+}
+const failuresList2 = makeList2(result);
+failuresList2;
+result
+
+//---------------------------------
+
+
+
+
+>>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b

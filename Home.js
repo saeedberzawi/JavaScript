@@ -14,7 +14,7 @@ console.log(name(a, 4));
 console.log(name(a, [1, 2, 3]));
 
 // ---------------------------
-
+//  xxxxx
 const b = [
   [1, 2, 4],
   [3, 5, 6],
@@ -37,9 +37,15 @@ const truck = [
   [7, 8, 9],
 ];
 
+<<<<<<< HEAD
 const addAndRemove = (arr, newElement, index, del) => {
   // arr.shift();
   arr.splice(index, del, newElement);
+=======
+const addAndRemove = (arr, index, newElement,) => {
+  arr.shift();
+  arr.splice(index, 0, newElement);
+>>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
   return arr;
 };
 
@@ -48,7 +54,11 @@ const index = 3;
 
 truck;
 console.log(addAndRemove(truck, newElement, index));
+<<<<<<< HEAD
 console.log(addAndRemove(truck, [1, 9, 9, 6], 0, 4));
+=======
+console.log(addAndRemove(truck, 0,[1, 9, 9, 6]));
+>>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
 
 // -----------------------
 
@@ -75,6 +85,7 @@ function addAndRe(arr, item, index) {
 }
 
 arr3d;
+console.log(addAndRe(arr3d, [13, 14, 15], 0));
 
 const newItem3d = [
   [
@@ -219,11 +230,12 @@ function sumArray(arr) {
 
 console.log(sumArray(Tah));
 
-const dada = Tah.flat();
+const dada = Tah.flat(2);
 dada;
 
 // ==================
 
+<<<<<<< HEAD
 let newN = [1, 2, 3];
 
 let newMan = (arr) => {
@@ -232,3 +244,14 @@ return arr.map((item)=>{
 }).join(" , ")  
 };
 console.log(newMan(newN));
+=======
+let obj = {
+  name: 'FreeCodeCamp',
+  review: 'Awesome',
+};
+Object.freeze(obj);
+obj.review = 'bad';
+obj.newProp = 'Test';
+console.log(obj);
+
+>>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
