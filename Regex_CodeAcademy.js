@@ -22,9 +22,36 @@ let result03 = twinkleStar.match(starRegex);
 console.log(result03);
 
 // => . - Wildcard Period
+// if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words.
 let humStr = "I'll hum a song";
 let hugStr = "Bear hug";
 let huRegex = /hu./;
-huRegex.test(humStr);
-console.log();
-huRegex.test(hugStr);
+let result04 = humStr.match(huRegex);
+console.log(result04);
+let result05 = hugStr.match(huRegex);
+console.log(result05);
+
+// => []
+// For example, you want to match bag, big, and bug but not bog.
+// You can create the regex /b[aiu]g/ to do this.
+// The [aiu] is the character class that will only match the characters a, i, or u.
+let quoteSample =
+  "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[bi]/gi;
+let result06 = quoteSample.match(vowelRegex);
+console.log(result06);
+
+// => -
+// Inside a character set, you can define a range of characters to match using a hyphen character: -.
+let quoteSample01 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-d]/gi;
+let result07 = quoteSample01.match(alphabetRegex);
+console.log(result07);
+
+// Using the hyphen (-) to match a range of characters is not limited to letters.
+// It also works to match a range of numbers.
+// For example, /[0-5]/ matches any number between 0 and 5, including the 0 and 5
+let quoteSample02 = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/gi;
+let result08 = quoteSample02.match(myRegex);
+console.log(result08);
