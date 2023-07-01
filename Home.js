@@ -37,18 +37,18 @@ const truck = [
   [7, 8, 9],
 ];
 
-const addAndRemove = (arr, newElement, index) => {
-  arr.shift();
-  arr.splice(index, 0, newElement);
+const addAndRemove = (arr, newElement, index, del) => {
+  // arr.shift();
+  arr.splice(index, del, newElement);
   return arr;
 };
 
 const newElement = [1, 9, 9, 2];
-const index = 2;
+const index = 3;
 
 truck;
 console.log(addAndRemove(truck, newElement, index));
-console.log(addAndRemove(truck, [1, 9, 9, 6], 0));
+console.log(addAndRemove(truck, [1, 9, 9, 6], 0, 4));
 
 // -----------------------
 
@@ -96,12 +96,12 @@ console.log(result3d);
 // --------------------------------------------------------------   --     ---    --        --      --
 
 const myObj = {
-  top: 'hat',
-  bottom: 'pants',
+  top: "hat",
+  bottom: "pants",
 };
 
-console.log(myObj.hasOwnProperty('top'));
-console.log(myObj.hasOwnProperty('middle'));
+console.log(myObj.hasOwnProperty("top"));
+console.log(myObj.hasOwnProperty("middle"));
 // ---
 console.log(Array.isArray(newItem3d));
 
@@ -186,6 +186,8 @@ function minus(arr) {
 
 console.log(minus(Taha));
 
+// ---------------------------
+
 function mohmad(arr) {
   let total = 0;
   for (i = 0; i < arr.length; i++) {
@@ -222,29 +224,11 @@ dada;
 
 // ==================
 
-function mokUP(num) {
-  answer = ''
-  switch (num) {
-    case 1:
-      num < 5;
-      return "The Number more than 5";
-    case 2:
-      num == 5;
-      return "The Number equal 5";
-    default:
-      "The Number less than 5";
-  }
+let newN = [1, 2, 3];
 
-  // if (num < 5) {
-  //   return "I is less than 5";
-  // } else if (num == 5) {
-  //   return "I is Equal";
-  // } else {
-  //   return "I is Bigger";
-  // }
-}
-
-console.log(mokUP(6));
-console.log(mokUP(5));
-console.log(mokUP(4));
-console.log(mokUP());
+let newMan = (arr) => {
+return arr.map((item)=>{
+  return `The new Item is ${item}`
+}).join(" , ")  
+};
+console.log(newMan(newN));

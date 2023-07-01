@@ -1,11 +1,11 @@
 var names = [
-  'Hole-in-one!',
-  'Eagle',
-  'Birdie',
-  'Par',
-  'Bogey',
-  'Double Bogey',
-  'Go Home!',
+  "Hole-in-one!",
+  "Eagle",
+  "Birdie",
+  "Par",
+  "Bogey",
+  "Double Bogey",
+  "Go Home!",
 ];
 function golfScore(par, strokes) {
   if (strokes == 1) {
@@ -44,19 +44,19 @@ par + 2	    "Double Bogey"
 // ---------------------------------------
 
 function caseInSwitch(val) {
-  var answer = '';
+  var answer = "";
   switch (val) {
     case 1:
-      answer = 'alpha';
+      answer = "alpha";
       break;
     case 2:
-      answer = 'beta';
+      answer = "beta";
       break;
     case 3:
-      answer = 'gamma';
+      answer = "gamma";
       break;
     case 4:
-      answer = 'delta';
+      answer = "delta";
       break;
   }
 
@@ -68,55 +68,55 @@ console.log(caseInSwitch(2));
 // ---------------------------------------------
 
 function switchOfStuff(val) {
-  var answer = '';
+  var answer = "";
   switch (val) {
-    case 'a':
-      answer = 'apple';
+    case "a":
+      answer = "apple";
       break;
-    case 'b':
-      answer = 'bird';
+    case "b":
+      answer = "bird";
       break;
-    case 'c':
-      answer = 'cat';
+    case "c":
+      answer = "cat";
       break;
     default:
-      answer = 'stuff';
+      answer = "stuff";
       break;
   }
   return answer;
 }
 
 // Change this value to test
-console.log(switchOfStuff('p'));
+console.log(switchOfStuff("p"));
 
 // --------------------------
 
 // Setup
 const recordCollection = {
   2548: {
-    albumTitle: 'Slippery When Wet',
-    artist: 'Bon Jovi',
-    tracks: ['Let It Rock', 'You Give Love a Bad Name'],
+    albumTitle: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
   },
   2468: {
-    albumTitle: '1999',
-    artist: 'Prince',
-    tracks: ['1999', 'Little Red Corvette'],
+    albumTitle: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
   },
   1245: {
-    artist: 'Robert Palmer',
+    artist: "Robert Palmer",
     tracks: [],
   },
   5439: {
-    albumTitle: 'ABBA Gold',
+    albumTitle: "ABBA Gold",
   },
 };
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
-  if (value === '') {
+  if (value === "") {
     delete records[id][prop];
-  } else if (prop === 'tracks') {
+  } else if (prop === "tracks") {
     records[id][prop] = records[id][prop] || []; // short circuit evaluation
     records[id][prop].push(value);
   } else {
@@ -125,7 +125,7 @@ function updateRecords(records, id, prop, value) {
   return records;
 }
 
-console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
+console.log(updateRecords(recordCollection, 5439, "artist", "ABBA"));
 
 // --------------------------------
 
@@ -202,7 +202,6 @@ console.log(sumSome(1, 2));
 const average = (array) => {
   let numberOfElements = array.length;
   let total = 0;
-
   for (i = 0; i < array.length; i++) {
     total += array[i];
   }
@@ -220,7 +219,7 @@ function multiply(arr, n) {
   if (n <= 0) {
     return 1;
   } else {
-    return multiply(arr, n - 1) + arr[n - 1];
+    return multiply(arr, n - 1) * arr[n - 1];
   }
 }
 
@@ -231,42 +230,42 @@ console.log(multiply([1, 2, 3, 4, 5, 6], 6));
 //Setup
 var contacts = [
   {
-    firstName: 'Akira',
-    lastName: 'Laine',
-    number: '0543236543',
-    likes: ['Pizza', 'Coding', 'Brownie Points'],
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
   },
   {
-    firstName: 'Harry',
-    lastName: 'Potter',
-    number: '0994372684',
-    likes: ['Hogwarts', 'Magic', 'Hagrid'],
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
   },
   {
-    firstName: 'Sherlock',
-    lastName: 'Holmes',
-    number: '0487345643',
-    likes: ['Intriguing Cases', 'Violin'],
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
   },
   {
-    firstName: 'Kristian',
-    lastName: 'Vos',
-    number: 'unknown',
-    likes: ['JavaScript', 'Gaming', 'Foxes'],
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
   },
 ];
 
 function lookUpProfile(name, prop) {
   for (var i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {
-      return contacts[i][prop] || 'No such property';
+      return contacts[i][prop] || "No such property";
     }
   }
-  return 'No such contact';
+  return "No such contact";
 }
 
 // Change these values to test your function
-var data = lookUpProfile('Sherlock', 'likes');
+var data = lookUpProfile("Sherlock", "likes");
 
 console.log(data);
 
@@ -294,9 +293,9 @@ console.log(myRandom);
 
 function findGreater(a, b) {
   if (a > b) {
-    return 'a is greater';
+    return "a is greater";
   } else {
-    return 'b is greater or equal';
+    return "b is greater or equal";
   }
 }
 
@@ -305,7 +304,7 @@ console.log(findGreater(1, 2));
 // This can be re-written using the conditional operator:
 
 function findGreater2(a, b) {
-  return a > b ? 'a is greater' : 'b is greater or equal';
+  return a > b ? "a is greater" : "b is greater or equal";
 }
 
 console.log(findGreater2(2, 1));
@@ -313,7 +312,7 @@ console.log(findGreater2(2, 1));
 // ---
 
 function checkEqual(a, b) {
-  return a == b ? 'Equal' : 'Not Equal';
+  return a == b ? "Equal" : "Not Equal";
 }
 
 console.log(checkEqual(1, 2));
@@ -324,33 +323,33 @@ console.log(checkEqual(1, 2));
 
 function findGreaterOrEqual(a, b) {
   if (a === b) {
-    return 'a and b are equal';
+    return "a and b are equal";
   } else if (a > b) {
-    return 'a is greater';
+    return "a is greater";
   } else {
-    return 'b is greater';
+    return "b is greater";
   }
 }
 // The above function can be re-written using multiple conditional operators:
 
 function findGreaterOrEqual(a, b) {
   return a === b
-    ? 'a and b are equal'
+    ? "a and b are equal"
     : a > b
-    ? 'a is greater'
-    : 'b is greater';
+    ? "a is greater"
+    : "b is greater";
 }
 
 function findGreaterOrEqual(a, b) {
   return a === b
-    ? 'a and b are equal'
+    ? "a and b are equal"
     : a > b
-    ? 'a is greater'
-    : 'b is greater';
+    ? "a is greater"
+    : "b is greater";
 }
 
 function checkSign(num) {
-  return num > 0 ? 'positive' : num < 0 ? 'negative' : 'zero';
+  return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
 }
 
 console.log(checkSign(1));
@@ -398,17 +397,16 @@ function rangeOfNumbers(startNum, endNum) {
 
 console.log(rangeOfNumbers(1, 5));
 
-
 // ==================
 
 let obj = {
-  name: 'FreeCodeCamp',
-  review: 'Awesome',
+  name: "FreeCodeCamp",
+  review: "Awesome",
 };
 Object.freeze(obj);
-obj.review = 'bad';
-obj.newProp = 'Test';
-console.log(obj); 
+obj.review = "bad";
+obj.newProp = "Test";
+console.log(obj);
 
 // =================================
 
@@ -418,15 +416,15 @@ function freezeObj() {
   };
   // Only change code below this line
   Object.freeze(MATH_CONSTANTS);
-  MATH_CONSTANTS
+  MATH_CONSTANTS;
   // Only change code above this line
   try {
     MATH_CONSTANTS.PI = 99;
   } catch (ex) {
     console.log(ex);
   }
-  
-  MATH_CONSTANTS
+
+  MATH_CONSTANTS;
   return MATH_CONSTANTS.PI;
 }
 
@@ -440,12 +438,12 @@ console.log(arr);
 
 function removeFirstTwo(list) {
   // Only change code below this line
-  const [a,b,...shorterList] = list; // Change this line
+  const [a, b, ...shorterList] = list; // Change this line
   // Only change code above this line
   return shorterList;
 }
 
 const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const sourceWithoutFirstTwo = removeFirstTwo(source);
-source
-sourceWithoutFirstTwo
+source;
+sourceWithoutFirstTwo;
