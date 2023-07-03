@@ -37,14 +37,11 @@ const truck = [
   [7, 8, 9],
 ];
 
-const addAndRemove = (arr, newElement, index, del) => {
-  // arr.shift();
-  arr.splice(index, del, newElement);
-const addAndRemove = (arr, index, newElement,) => {
+const addAndRemove = (arr, newElement, index) => {
   arr.shift();
   arr.splice(index, 0, newElement);
   return arr;
-}};
+};
 
 const newElement = [1, 9, 9, 2];
 const index = 3;
@@ -52,7 +49,7 @@ const index = 3;
 truck;
 console.log(addAndRemove(truck, newElement, index));
 console.log(addAndRemove(truck, [1, 9, 9, 6], 0, 4));
-console.log(addAndRemove(truck, 0,[1, 9, 9, 6]));
+console.log(addAndRemove(truck, 0, [1, 9, 9, 6]));
 
 // -----------------------
 
@@ -230,11 +227,10 @@ dada;
 // ==================
 
 let obj = {
-  name: 'FreeCodeCamp',
-  review: 'Awesome',
+  name: "FreeCodeCamp",
+  review: "Awesome",
 };
 Object.freeze(obj);
-obj.review = 'bad';
-obj.newProp = 'Test';
+obj.review = "bad";
+obj.newProp = "Test";
 console.log(obj);
-
