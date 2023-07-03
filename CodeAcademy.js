@@ -259,11 +259,7 @@ var contacts = [
 function lookUpProfile(name, prop) {
   for (var i = 0; i < contacts.length; i++) {
     if (contacts[i].firstName === name) {
-<<<<<<< HEAD
-      return contacts[i][prop] || "No such property";
-=======
       return ` your search is : ${contacts[i][prop]}` || 'No such property';
->>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
     }
   }
   return "No such contact";
@@ -409,13 +405,8 @@ let obj = {
   review: "Awesome",
 };
 Object.freeze(obj);
-<<<<<<< HEAD
 obj.review = "bad";
 obj.newProp = "Test";
-=======
-obj.review = 'bad';
-obj.newProp = 'Test';
->>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
 console.log(obj);
 
 // =================================
@@ -457,8 +448,6 @@ const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const sourceWithoutFirstTwo = removeFirstTwo(source);
 source;
 sourceWithoutFirstTwo;
-<<<<<<< HEAD
-=======
 
 // ------------------
 
@@ -502,4 +491,3 @@ result
 
 
 
->>>>>>> 41adee3817f25c9d04c2e297b5fd26e6332d370b
